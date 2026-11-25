@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>طور القمر الليلة — مختبر تفاعلي | موسوعة السماء العربية</title>
+<meta name="description" content="حاسبة تفاعلية لطور القمر وعمره ونسبة إضاءته لأي تاريخ، مع جدول منازل القمر الثمانية والعشرين. محتوى تعليمي عربي أصلي من فريق موسوعة السماء العربية.">
+<style>
+  :root { color-scheme: dark; }
+  body { font-family: "Segoe UI", Tahoma, Arial, sans-serif; background: #0b1026; color: #e8ecf8; margin: 0; line-height: 1.9; }
+  main { max-width: 860px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+  h1 { color: #ffd97a; font-size: 1.7rem; }
+  h2 { color: #9fc3ff; border-bottom: 1px solid #2a3560; padding-bottom: .3rem; margin-top: 2.4rem; }
+  .card { background: #141b3d; border: 1px solid #2a3560; border-radius: 12px; padding: 1.2rem 1.4rem; margin: 1rem 0; }
+  .moon { font-size: 4rem; line-height: 1; }
+  label { display: block; margin-bottom: .4rem; color: #b9c4e8; }
+  input[type="date"] { background: #0b1026; color: #e8ecf8; border: 1px solid #3a4a80; border-radius: 8px; padding: .5rem .8rem; font-size: 1rem; }
+  .result { font-size: 1.15rem; margin-top: .8rem; }
+  .result strong { color: #ffd97a; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; }
+  th, td { border: 1px solid #2a3560; padding: .45rem .6rem; text-align: right; }
+  th { background: #1a2350; color: #ffd97a; }
+  tr:nth-child(even) td { background: #101736; }
+  a { color: #7fb2ff; }
+  .links li { margin-bottom: .5rem; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #2a3560; color: #8d99c4; font-size: .9rem; }
+  .note { color: #8d99c4; font-size: .88rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>🌙 طور القمر الليلة — مختبر تفاعلي</h1>
+  <p>صفحة تعليمية من إعداد فريق <a href="https://arabskypedia.com">موسوعة السماء العربية</a>، مرجع عربي مجاني في علم الفلك. احسب طور القمر وعمره ونسبة إضاءة قرصه لأي تاريخ، وتعرّف على منازل القمر كما رتّبها الفلكيون العرب قديمًا.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0">حاسبة طور القمر</h2>
+    <label for="date">اختر التاريخ:</label>
+    <input type="date" id="date">
+    <div class="result" id="out">
+      <span class="moon" id="emoji">🌕</span>
+      <div id="text"></div>
+    </div>
+    <p class="note">الحساب تقريبي لأغراض تعليمية، وقد يختلف عن التقويمات الفلكية الدقيقة بفارق يوم أو أكثر عند أطراف الأطوار.</p>
+  </div>
+
+  <h2>ما هي منازل القمر؟</h2>
+  <p>قسّم الفلكيون العرب مسار القمر الظاهري في السماء إلى ثمانية وعشرين «منزلة»، يحلّ القمر في واحدة منها كل ليلة تقريبًا ليكمل دورته حول الأرض في نحو 27.3 يومًا. استُخدمت المنازل في التقويم الزراعي والملاحة والتنجيم الشعبي، ولكل منزلة اسم مأخوذ من نجومها البارزة.</p>
+
+  <h2>جدول منازل القمر الثمانية والعشرين</h2>
+  <table>
+    <thead><tr><th>#</th><th>المنزلة</th><th>أبرز نجومها</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>الشرطان (النّطْح)</td><td>نجوم في رأس الحمل</td></tr>
+      <tr><td>2</td><td>البطين</td><td>بطن الحمل</td></tr>
+      <tr><td>3</td><td>الثريا</td><td>عنقود الثريا في الثور</td></tr>
+      <tr><td>4</td><td>الدبران</td><td>عين الثور</td></tr>
+      <tr><td>5</td><td>الهقعة</td><td>نجوم في منكب الجوزاء</td></tr>
+      <tr><td>6</td><td>الهنعة</td><td>نجوم في الجوزاء</td></tr>
+      <tr><td>7</td><td>الذراع</td><td>ذراعا الجوزاء</td></tr>
+      <tr><td>8</td><td>النثرة</td><td>حضن الأسد (بريسيبي)</td></tr>
+      <tr><td>9</td><td>الطرف</td><td>طرف الأسد</td></tr>
+      <tr><td>10</td><td>الجبهة</td><td>جبهة الأسد</td></tr>
+      <tr><td>11</td><td>الزبرة (الخراتان)</td><td>قوائم الأسد الأمامية</td></tr>
+      <tr><td>12</td><td>الصرفة</td><td>ذنب الأسد</td></tr>
+      <tr><td>13</td><td>العواء</td><td>نجوم في العذراء</td></tr>
+      <tr><td>14</td><td>السماك (السماك الأعزل)</td><td>السماك الرامح (الأعزل)</td></tr>
+      <tr><td>15</td><td>الغفر</td><td>نجوم في العذراء</td></tr>
+      <tr><td>16</td><td>الزبانى</td><td>مخالب العقرب</td></tr>
+      <tr><td>17</td><td>الإكليل</td><td>إكليل العقرب</td></tr>
+      <tr><td>18</td><td>القلب</td><td>قلب العقرب (أنتاريس)</td></tr>
+      <tr><td>19</td><td>الشولة</td><td>إبرة العقرب</td></tr>
+      <tr><td>20</td><td>النعائم</td><td>نعام القوس</td></tr>
+      <tr><td>21</td><td>البلدة</td><td>منطقة خالية بين النعائم وسعد الذابح</td></tr>
+      <tr><td>22</td><td>سعد الذابح</td><td>نجوم في الجدي</td></tr>
+      <tr><td>23</td><td>سعد بلع</td><td>نجوم في الدلو</td></tr>
+      <tr><td>24</td><td>سعد السعود</td><td>نجوم في الدلو</td></tr>
+      <tr><td>25</td><td>سعد الأخبية</td><td>نجوم في الدلو</td></tr>
+      <tr><td>26</td><td>فرغ المقدم</td><td>مربع بيغاسوس</td></tr>
+      <tr><td>27</td><td>فرغ المؤخر</td><td>مربع بيغاسوس</td></tr>
+      <tr><td>28</td><td>بطن الحوت (الرشاء)</td><td>نجوم في الحوت</td></tr>
+    </tbody>
+  </table>
+
+  <h2>تابع الاستكشاف في الموسوعة</h2>
+  <ul class="links">
+    <li><a href="https://arabskypedia.com">موسوعة السماء العربية</a> — الصفحة الرئيسية والأقسام الكاملة.</li>
+    <li><a href="https://arabskypedia.com/atlas/">أطلس السماء التفاعلي</a> — خريطة نجوم حيّة بوضع ليلي وعرض ثلاثي الأبعاد.</li>
+    <li><a href="https://arabskypedia.com/star-names/">أسماء النجوم العربية</a> — أكثر من مئة نجم يحمل اسمًا عربي الأصل.</li>
+    <li><a href="https://arabskypedia.com/games/">ألعاب فلكية</a> — ألعاب تعليمية بالعربية حول الكوكبات والكواكب.</li>
+  </ul>
+
+  <footer>
+    إعداد فريق موسوعة السماء العربية · المحتوى أصلي ومفتوح للاستخدام التعليمي مع ذكر المصدر ·
+    <a href="https://github.com/arabskypedia2">حسابنا على GitHub</a>
+  </footer>
+</main>
+<script>
+(function () {
+  // نموذج تعليمي مبسّط: طور القمر من عمره بالنسبة لدورة شهرية متوسطة 29.530588853 يومًا.
+  // نقطة الارتكاز: محاق 6 يناير 2000 الساعة 18:14 بالتوقيت العالمي.
+  var SYNODIC = 29.530588853;
+  var EPOCH = Date.UTC(2000, 0, 6, 18, 14);
+
+  function moonAge(date) {
+    var days = (date.getTime() - EPOCH) / 86400000;
+    return ((days % SYNODIC) + SYNODIC) % SYNODIC;
+  }
+  function illumination(age) {
+    return (1 - Math.cos(2 * Math.PI * age / SYNODIC)) / 2 * 100;
+  }
+  function phase(age) {
+    var a = age / SYNODIC;
+    if (a < 0.0339 || a >= 0.9661) return ["محاق", "🌑"];
+    if (a < 0.25) return ["هلال أول متزايد", "🌒"];
+    if (a < 0.2839) return ["تربيع أول", "🌓"];
+    if (a < 0.5) return ["أحدب متزايد", "🌔"];
+    if (a < 0.5339) return ["بدر", "🌕"];
+    if (a < 0.75) return ["أحدب متناقص", "🌖"];
+    if (a < 0.7839) return ["تربيع أخير", "🌗"];
+    return ["هلال أخير متناقص", "🌘"];
+  }
+  function render() {
+    var v = document.getElementById("date").value;
+    if (!v) return;
+    var d = new Date(v + "T12:00:00Z");
+    var age = moonAge(d);
+    var p = phase(age);
+    document.getElementById("emoji").textContent = p[1];
+    document.getElementById("text").innerHTML =
+      "الطور: <strong>" + p[0] + "</strong> · عمر القمر: <strong>" +
+      age.toFixed(1) + " يوم</strong> · الإضاءة: <strong>" +
+      illumination(age).toFixed(0) + "٪</strong>";
+  }
+  var input = document.getElementById("date");
+  var now = new Date();
+  input.value = now.toISOString().slice(0, 10);
+  input.addEventListener("change", render);
+  render();
+})();
+</script>
+</body>
+</html>
